@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main(){
+	FILE *fptr;
+	fptr=fopen("test.txt","r");// filename refers the name of the required file
+	char ch;
+	while((ch=fgetc(fptr))!=EOF){
+		if(ch=='b')
+		printf("%c",ch);
+	}
+	fclose(fptr);
+}
