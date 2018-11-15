@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+	FILE *fptr;
+	fptr=fopen("test.txt","r");// filename refers the name of the required file
+	char ch;
+	int c=0;
+	while((ch=fgetc(fptr))!=EOF){
+		if(ch=='$')
+		c++;
+	}
+	printf("The number of times '$' symbol appeared is %d ",c);
+	fclose(fptr);
+}
