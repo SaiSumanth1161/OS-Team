@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(){
+	FILE *fptr;
+	fptr=fopen("myfile.txt","r");// filename refers the name of the required file
+	int c=0;char ch;
+	while((ch=fgetc(fptr))!=EOF){
+		if(c!=100&&ch!='\n'){
+			printf("%c",ch);
+			c++;
+		}
+		else
+		break;
+	}
+	fclose(fptr);
+}
