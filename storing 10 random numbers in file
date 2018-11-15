@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+	FILE *fptr=fopen("myfile.txt","w");
+	if(fptr){
+		int i;
+		for(i=0;i<10;i++){
+			int n=rand();
+			fprintf(fptr,"%d",n);
+		//	fputs(" ",fptr);
+		}
+	}
+	else
+	printf("File not exist");
+	fclose(fptr);
+}
