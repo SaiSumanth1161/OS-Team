@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(){
+	int n,i;
+	printf("Enter the number of strings that you wish to enter : ");
+	scanf("%d",&n);
+	char str[1000];
+	FILE *fptr;
+	fptr=fopen("test.txt","w");
+	for(i=0;i<n;i++){
+		printf("Enter the string : ",i+1);
+		scanf(" %[^\t\n]s",&str);
+		fputs(str,fptr);
+		fputs("\n",fptr);
+	}
+	fclose(fptr);
+}
