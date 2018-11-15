@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(){
+	FILE *fptr=fopen("file1.txt","r");
+	FILE *fptr1=fopen("file2.txt","w");
+	if(fptr){
+		char ch;
+		while((ch=fgetc(fptr))!=EOF)
+		fputc(ch,fptr1);
+		
+	}
+	else
+	printf("File not exist");
+	fclose(fptr);
+	fclose(fptr1);
+}
