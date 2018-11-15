@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+	FILE *fptr=fopen("alphabet.txt","w");
+	if(fptr){
+		int i;
+		for(i=65;i<91;i++){
+			fputc(char(i),fptr);
+		}
+	}
+	else
+	printf("File not exist");
+	fclose(fptr);
+}
