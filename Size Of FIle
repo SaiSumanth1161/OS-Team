@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+	FILE *fptr=fopen("test.txt","r");
+	if(fptr){
+		fseek(fptr,0,2);// it puts file pointer to the end of the file
+		int c=ftell(fptr);
+		printf("The size of given file is : %d ",c);
+	}
+	else
+	printf("File not exist");
+	fclose(fptr);
+}
