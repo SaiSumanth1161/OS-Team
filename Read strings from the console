@@ -7,7 +7,7 @@ int main(){
 	FILE *fptr;
 	fptr=fopen("test.txt","w");
 	for(i=0;i<n;i++){
-		printf("Enter the string : ",i+1);
+		printf("Enter the string : ");
 		scanf(" %[^\t\n]s",&str);
 		fputs(str,fptr);
 		fputs("\n",fptr);
