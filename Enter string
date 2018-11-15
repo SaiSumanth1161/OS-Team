@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+	FILE *fptr=fopen("mylog.txt","a");
+	if(fptr){
+		char s[1000];
+		printf("Enter the string that need to be added : ");
+		scanf(" %[^\t\n]s",s);
+		fputs(s,fptr);
+		fputs("\n",fptr);
+	}
+	else
+	printf("File not exist");
+	fclose(fptr);
+}
