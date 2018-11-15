@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+printf("Enter text : ");
+char ch;
+while((ch=getc(stdin))!=10)
+putc(ch,stdout);
+	return 0;
+}
