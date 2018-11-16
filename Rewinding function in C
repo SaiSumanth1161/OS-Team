@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+	FILE *fptr=fopen("mylog.txt","w");
+	int i;char ch;
+	for(i=65;i<91;i++)
+	fputc((char)i,fptr);
+	fclose(fptr);
+	fptr=fopen("mylog.txt","r");
+	while((ch=fgetc(fptr))!=EOF)
+	printf("%c",ch);
+	rewind(fptr);            // It sets the file position to the beginning of the file of the given stream.
+	printf("\n After rewinding the file \n");
+	while((ch=fgetc(fptr))!=EOF)
+	printf("%c",ch);
+	fclose(fptr);
+}
