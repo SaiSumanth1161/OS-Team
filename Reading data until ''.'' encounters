@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){
+	FILE *fptr=fopen("mylog.txt","w");
+	if(fptr){
+		char ch;
+		printf("Enter the text (press '.' to exit ) : ");
+		while(1){
+			scanf("%c",&ch);
+			if(ch=='.')
+			break;
+			fputc(ch,fptr);
+		}
+	}
+	else
+	printf("File not exist");
+	fclose(fptr);
+}
